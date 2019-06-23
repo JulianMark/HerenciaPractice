@@ -42,7 +42,7 @@ public class Profesor extends Person{
     @Override
     public String toString() {
         return super.toString() 
-                + ", enrollment= " + enrollment +"\n"
+                + "enrollment= " + enrollment +"\n"
                 + "sueldo= "+ calculate();
     }
 

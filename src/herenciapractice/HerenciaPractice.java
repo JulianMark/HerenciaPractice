@@ -32,6 +32,7 @@ public class HerenciaPractice {
         }else {
             person = new Student();
         }
+        
         person.setId(1);//id de tipo generico para test
         System.out.print("Ingrese el nombre: ");
         String name = sc.next();
@@ -50,11 +51,23 @@ public class HerenciaPractice {
             System.out.print("Ingrese cuanto cobra por hora: ");
             float salary = sc.nextFloat();
             ((Profesor) person).setSalary(salary);
-        }else {
-            System.out.println("era un estudiante");
+        }else if (person instanceof Student){
+            System.out.print("Ingrese legajo: ");
+            String file = sc.next();
+            ((Student) person).setFile(file);
+            System.out.print("Ingrese nota 1: ");
+            int note = sc.nextInt();
+            ((Student) person).setNote1(note);
+            System.out.print("Ingrese nota 2: ");
+            note = sc.nextInt();
+            ((Student) person).setNote2(note);
+            System.out.print("Ingrese nota 3: ");
+            note = sc.nextInt();
+            ((Student) person).setNote3(note);
         }
         
         person.calculate();
+        System.out.println(" "); //dejamos un reglon
         System.out.println(person.toString());
     }
     
